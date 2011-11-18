@@ -1,0 +1,6 @@
+[asl]
+name=ASL
+baseurl=http://<%= node[:asl][:username] %>:<%= node[:asl][:password] %>@<%= node[:asl][:channel] %>/$releasever/$basearch
+enabled=1
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY.art.txt
+gpgcheck=1

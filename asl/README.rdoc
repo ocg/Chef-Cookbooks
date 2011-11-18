@@ -1,0 +1,13 @@
+= DESCRIPTION:
+
+Installs and configures ASL Lite or ASL packages.
+
+= REQUIREMENTS:
+
+CentOS or RedHat, other platforms are supported but have not been tested with this cookbook.
+
+Apache2 from the Chef-Cookbook library is required.
+
+= ATTRIBUTES:
+
+Change the default attributes to match your setup.
