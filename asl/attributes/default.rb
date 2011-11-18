@@ -49,7 +49,7 @@ set[:asl][:web_client] = false
 
 arch = node[:kernel][:machine] == "i386" || node[:kernel][:machine] == "i686" ? "i386" : "x86_64"
 
-default[:asl][:rpm_url] = "http://www.atomicorp.com/channels/atomic/#{node[:platform]}/#{arch}/#{node[:platform_version].split('.')[0]}/RPMS/atomic-release-1.0-13.el5.art.noarch.rpm"
+default[:asl][:rpm_url] = "http://www.atomicorp.com/channels/atomic/#{node[:platform]}/#{node[:platform_version].split('.')[0]}/#{arch}/RPMS/atomic-release-1.0-13.el5.art.noarch.rpm"
 default[:asl][:rpm_key_url] = "https://www.atomicorp.com/RPM-GPG-KEY.art.txt"
 
 default[:asl][:channel] = "atomicorp.com/channels/asl-3.0/#{node[:platform]}"
