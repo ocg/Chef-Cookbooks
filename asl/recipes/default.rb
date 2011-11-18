@@ -1,5 +1,5 @@
-include_recipe "apache2"
 include_recipe "asl::repo"
+include_recipe "apache2"
 
 if node[:asl][:modsec][:enable] == "yes"
 	package "mod_security" do
