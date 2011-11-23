@@ -13,6 +13,30 @@ if node[:asl][:modsec][:enable] == "yes"
 
 		action :create
 	end
+
+	directory "/var/asl/data/audit" do
+		mode 755
+		owner "apache"
+		group "apache"
+		action :create
+		recursive true
+	end
+
+	directory "/var/asl/data/msa" do
+		mode 755
+		owner "apache"
+		group "apache"
+		action :create
+		recursive true
+	end
+
+	directory "/var/asl/data/suspicious" do
+		mode 755
+		owner "apache"
+		group "apache"
+		action :create
+		recursive true
+	end
 end
 
 if node[:asl][:version] == "full"
@@ -37,6 +61,6 @@ template "/etc/asl/config" do
 	group "root"
 	
 	action :create
-	notifies :run, "execute[start-asl-scan]"
+	notifies :run, "execute[start-asl-scan]", :immediately
 end
 
